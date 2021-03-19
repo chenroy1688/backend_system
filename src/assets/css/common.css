@@ -1,0 +1,226 @@
+﻿@import "reset.css";
+@import "index.css";
+
+/* ------------------------------
+   css 通用 -- 设定
+------------------------------ */
+/* total 共用设定 ---------------------------------------------- */
+:root{
+  /* font-size setting */
+  --main-fontTitle-3:3vw;
+  --main-fontTitle-3-5:3.5vw;
+  --main-letterSpacing-0-7:0.7vw;
+
+  /* text color setting */
+  --main-topicBlue-color:#0e6def;
+  --main-topicRed-color:#ff0004;
+  --main-gameTxt-color:#d74554;
+}
+
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing:border-box;
+    box-sizing: border-box;
+}
+html, body { min-height: 100%;}
+.none{display:none !important;}
+img { width: 100%; }
+span { vertical-align: baseline;}
+p { margin: 0; line-height:24px;}
+a{
+  transition:all 0.5s;
+  text-decoration: none;
+}
+input{
+  font-size: 14px;
+  padding:15px;
+}
+
+.bos{border:1px solid #ff0000;}
+
+ul,li { margin: 0; padding: 0; list-style: none; }
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  
+body{
+    margin:0;
+    padding:0;
+    height:100%; 
+    position: relative; /* 统一定位 */
+    font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;
+    /* font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei',"微軟正黑體"; */
+}
+
+.total_wrap{
+  min-height:100vh;
+}
+.total_wrap .left_bar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:200px;
+    height:100%;
+    background-color:#000;
+    -webkit-box-shadow: 0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+    z-index:999;
+}
+.pc_wrap{
+  /* max-width:1026px; */
+  min-height:100vh;
+  margin:0 auto;
+}
+.m_menu ul.menu{
+  width:482px;
+  float:right;
+  box-sizing:border-box;
+}
+.m_menu ul.menu li{
+  position:relative;
+  display:block;
+  float:left;
+  width:120px;
+  height:55px;
+  transition: all 0.5s ease-out;
+  z-index:999;
+}
+
+/* 全站 通用设定 -------------------------------------------------------- */
+button{
+  padding:10px;
+  color:#fff;
+  font-size:14px;
+  cursor:pointer;
+  border-style:none;
+  background-color:#d81e2b;
+}
+.vue-dialog-btns button{
+  background-color:#999;
+  color:#fff;
+}
+
+/* about Us -------------------------------------------------------- */
+.content{ 
+  border-bottom:1px solid #d4d4d4;
+}
+.col-3 .contact_top{
+  height:50px;
+  color:#fff;
+  line-height:50px;
+  text-align:center;
+  background-color:#666;
+}
+.data_box{
+  margin:0 0 25px 0;
+}
+.data_icon{
+  position:relative;
+}
+.nav-link .list-group-item{
+  color:#fff;
+  background-color:rgba(0,0,0,0.3);
+}
+
+.contnet_main_topic{
+  height:80px;
+  line-height:80px;
+}
+.contnet_main_topic span{
+  display:block;
+}
+.contnet_main_topic span:first-child{
+  font-size:20px;
+  letter-spacing:12px;
+}
+.contnet_main_topic span:last-child{
+  color:#0e6def;
+}
+
+.card h1{
+  font-size:16px;
+  color:#000;
+  height:60px;
+  line-height: 60px;
+  background-color:#fde6ad;
+}
+.card p{
+  color:#999;
+  line-height:20px;
+  padding:15px 0;
+  text-align:left;
+}
+.contact_wrap p{
+  line-height:24px;
+}
+.card-text{
+  text-align:left;
+  padding-left:20px;
+}
+
+.contact_info h2{
+  line-height:6px;
+}
+.contact_info p{
+  color:#666;
+  line-height:20px;
+}
+
+.third_info{
+  height:80px;
+  line-height: 80px;
+}
+.third_btn{
+  display:flex;
+  justify-content: space-between;
+}
+.third_btn a{
+  flex:1 2 50%;
+  height:50px;
+  line-height:50px;
+  font-size:16px;
+  color:#999;
+  text-align:center;
+  border:1px solid #999;
+}
+.third_btn a:hover{
+  color:#fff;
+  font-weight:600;
+  background-color:#666;
+} 
+
+/* comA 組件 -------------------------------------------------------- */
+.comA-wrap{
+  display:flex;
+  justify-content: space-between;
+}
+.comA-wrap img{
+  width:352px;
+  height:230px;
+  flex:1 2 30%;
+}
+.comA-content{
+  flex:1 2 70%;
+}
+.comA-content h1{
+  font-size:18px;
+  color:#d81e29;
+  background:none;
+}
+.comA-content p{
+  color:#999;
+  padding-left:25px;
+}
+
+.comA-num{
+  flex:1 2 100%;
+}
+
+
+
+

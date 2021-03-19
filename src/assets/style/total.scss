@@ -1,0 +1,340 @@
+﻿/* ------------------------------
+   css 通用 -- 设定
+------------------------------ */
+// @import "aside.scss";
+// @import "commonTab_set";
+
+/* extend设定 -- (继承) */
+%underline{
+    text-decoration:none;
+}
+%transition{
+    transition:all 0.5s;
+}
+
+/* mixin设定 */
+@mixin css3-line($height,$bold){
+    line-height: $height;
+    font-weight: $bold;
+}
+
+/* 颜色設定 */
+$color1 :#0000ff;
+$yellow: #f7ed2a;
+$gray999: #999;
+$gray:#d3d3d3;
+$white:white;
+$red:#ff0000;
+$black:#000;
+$taohon: #d81e29;
+
+$lineGray:1px solid #d6d3d3;
+$lineWhite:1px solid #fff;
+$bdsolid:1px solid #000;
+
+/* 文字設定 */
+$ft12:12px;
+$ft14:14px;
+$ft16:16px;
+$ft18:18px;
+$ft20:20px;
+$ft22:22px;
+
+/* 间距設定 */
+$auto:0 auto;
+$num:15px;
+$lineHeight:25px;
+
+$marginTop:var(--main-margin30) 0;
+
+/* total 共用设定 ---------------------------------------------- */
+:root{
+  /* text color setting */
+  --main-black-color: #000;
+  --main-red-color:#ff0000;
+  --main-gray999-color: #999;
+  --main-grayd3-color:#d3d3cf;
+  
+  /* padding_margin setting */
+  --main-padding20:20px;
+  --main-padding25:0 20px;
+  --main-padding30:30px;
+
+  --main-margin20:20px;
+  --main-margin30:30px;
+
+  /* color setting */
+  --bar-main-color:rgb(232, 102, 102);
+  --top-main-color:rgb(216, 30, 41);
+  --white-main-color:rgb(255,255,255,1);
+
+  /* bg setting */
+  --main-Bggrey:#ebeced;
+  --main-Bggreycec:#cecaca;
+  --main-Bggrey999:#999;
+  --main-Bgblack:black;
+  --main-Bgblue:#2894FF;
+
+  /* border setting */
+  --main-bosGray:#ccc;
+  --main-bosGray02:#a9a9a7;
+}
+
+/* ------------------------------
+   css 通用 -- 设定
+------------------------------ */
+*{
+  margin:0;
+  padding:0;
+  list-style:none;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing:border-box;
+  box-sizing: border-box;
+}
+html, body { min-height: 100%;}
+.none{display:none !important;}
+.overFlow{ overflow:hidden; }
+
+.el_div{
+  padding:20px;
+  border:$lineGray;
+  span.topic{
+    display:block;
+    font-size:14px;
+    padding:10px 0;
+  }
+  > .el-input{ 
+      /deep/ .el-input__inner{ //深层作用选择器更改scss设定
+          width:200px;
+          color:#fff;
+          border:1px solid #999;
+          background-color:#333 !important;
+      }
+  }
+  h3{
+    font-size:18px;
+    padding:0 0 30px 0;
+  }
+}
+
+img { width: 100%; }
+span { vertical-align: baseline; }
+p { margin: 0;}
+a{
+  transition:all 0.5s;
+  text-decoration: none;
+}
+
+button{
+  padding:10px 6px;
+  color:#fff;
+  font-size:14px;
+  text-align:center;
+  border-style:none;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+ul,li { margin: 0; padding: 0; list-style: none; }
+*:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* 图片 懒加载设定 ---------------------------------------------- */
+.img-box{
+  //loading图片大小
+  img[lazy="loading"] {
+      width:500px;
+      height:auto;
+      margin-top:30px;
+  }
+  //实际图片大小
+  img[lazy="loaded"] {
+      width:600px;
+      height:auto;
+      margin-top:30px;
+  }
+}
+
+/* 按鈕作用 ---------------------------------------------- */
+.isActive{
+  background-color:#d81e2b !important;
+}
+
+//標籤分頁
+.card p.card-text{
+  color:#333;
+  line-height:28px;
+}
+
+.card-body{ clear:both }
+.card-body h4 span{
+  margin:0 15px 0 0;
+}
+.card-body h4{
+  padding:20px 0;
+}
+.card-body .card-text a{
+   display:inline-block;
+   text-align:center;
+   padding:15px 25px;
+   color:#fff;
+   background-color:#999;
+}
+.card-body .card-text a:hover{
+   background-color:#000;
+}
+.card-body .card-text a ~ a{ 
+  border-left:1px solid #fff;
+}
+.card-body p.card-text{
+  color:#666;
+  margin:20px 0 0 0;
+}
+.card-body p.card-text:first-child{
+  margin:0;
+}
+
+
+.nav-link .list-group-item{
+  color:#fff;
+  background-color:rgba(0,0,0,0.3);
+}
+.router-link-active{
+  background-color:var(--main-Bgblack) !important;
+}
+
+
+/* ------------------------------
+   mask checkbox -- 设定
+------------------------------ */
+.mask{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow-y:hidden;
+  background:rgba(0,0,0,0.8);
+  z-index:999;
+  .jmpView{
+    position:absolute;
+    width:50%;
+    height:auto;
+    padding:25px;
+    top:50%;
+    left:50%;
+    border-radius: 7px;
+    transform:translateX(-50%) translateY(-50%);
+    -ms-transform:translateX(-50%) translateY(-50%);
+    -moz-transform:translateX(-50%) translateY(-50%);
+    -webkit-transform:translateX(-50%) translateY(-50%);
+    -o-transform:translateX(-50%) translateY(-50%);
+    background-color:#fff;
+    .edit_content{
+      margin-top:30px;
+    }
+    .del-body{
+      margin-top:25px;
+      button{
+        width:48%;
+      }
+    }
+  }
+}
+
+
+/* about Us -------------------------------------------------------- */
+.content{
+  border-bottom:1px solid #d4d4d4;
+}
+.col-3 .contact_top{
+  height:50px;
+  color:#fff;
+  line-height:50px;
+  text-align:center;
+  background-color:#666;
+}
+.data_box{
+  margin:0 0 25px 0;
+}
+.data_icon{
+  position:relative;
+}
+.nav-link .list-group-item{
+  color:#fff;
+  background-color:rgba(0,0,0,0.3);
+}
+
+.contnet_main_topic{
+  height:80px;
+  line-height:80px;
+}
+.contnet_main_topic span{
+  display:block;
+}
+.contnet_main_topic span:first-child{
+  font-size:20px;
+  letter-spacing:12px;
+}
+.contnet_main_topic span:last-child{
+  color:#0e6def;
+}
+
+.card h1{
+  font-size:16px;
+  color:#000;
+  height:60px;
+  line-height: 60px;
+  background-color:#fde6ad;
+}
+.card p{
+  color:#999;
+  line-height:20px;
+  padding:15px 0;
+  text-align:left;
+}
+.contact_wrap p{
+  line-height:24px;
+}
+.card-text{
+  text-align:left;
+  padding-left:20px;
+}
+
+.contact_info h2{
+  line-height:6px;
+}
+.contact_info p{
+  color:#666;
+  line-height:20px;
+}
+
+.third_info{
+  height:80px;
+  line-height: 80px;
+}
+.third_btn{
+  display:flex;
+  justify-content: space-between;
+}
+.third_btn a{
+  flex:1 2 50%;
+  height:50px;
+  line-height:50px;
+  font-size:16px;
+  color:#999;
+  text-align:center;
+  border:1px solid #999;
+}
+.third_btn a:hover{
+  color:#fff;
+  font-weight:600;
+  background-color:#666;
+} 
+
+
+
+
