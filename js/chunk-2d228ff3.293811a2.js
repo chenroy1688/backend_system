@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d228ff3"],{dc20:function(t,n,a){"use strict";a.r(n);var c=function(){var t=this,n=t.$createElement,a=t._self._c||n;return a("div",{staticClass:"pc_wrap"},[a("el-row",[a("el-col",{staticClass:"contnet_main_topic",attrs:{span:24}},[a("span",[t._v("数据下载")])])],1)],1)},s=[],e={data:function(){return{portTxt:"main內容區"}}},r=e,i=a("2877"),o=Object(i["a"])(r,c,s,!1,null,"a9d749b8",null);n["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d228ff3.293811a2.js.map

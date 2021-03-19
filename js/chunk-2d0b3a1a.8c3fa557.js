@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0b3a1a"],{"28ca":function(t,e,n){"use strict";n.r(e);var a=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},c=[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"contact_info"},[n("p",[t._v("※ 电话 : 13245678911")]),n("p",[t._v("※ QQ : 092548714")]),n("p",[t._v("※ 地址 : Copyrights 2009　江苏省广播电视总台版权所有")])])}],s=n("2877"),r={},i=Object(s["a"])(r,a,c,!1,null,"de712af6",null);e["default"]=i.exports}}]);
+//# sourceMappingURL=chunk-2d0b3a1a.8c3fa557.js.map
