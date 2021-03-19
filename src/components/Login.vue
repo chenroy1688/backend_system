@@ -3,7 +3,7 @@
     <div class="login-wrap">
         <div class="login-content">
             <div class="login-main">
-                <h2 class="login-main-title">管理员登陆</h2>
+                <h2 class="login-main-title">管理员登陆11</h2>
                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm" @keyup.enter.native="login()">
                     <!-- 帐号 栏位 -->
                     <el-form-item label="用户名" prop="username">
